@@ -21,9 +21,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class BuildGraph {
 
-    public static final char PIE_GRAPH = 'p';
-    public static final char LINE_GRAPH = 'l';
-    public static final char BAR_GRAPH = 'b';
+    public static final char PIE_GRAPH = 1;
+    public static final char LINE_GRAPH = 2;
+    public static final char BAR_GRAPH = 3;
 
     @Autowired
     private GraphFactory graphFactory;

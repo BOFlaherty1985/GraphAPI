@@ -79,6 +79,7 @@ public class BuildGraphControllerTest {
     public void isGenerateGraphRequestMappingValidAndReturnsOKStatus() throws Exception {
 
         GraphProperties graphProperties = mockGraphProperties("Test 1 Graph", "SMALL", false);
+        graphProperties.setTypeOfGraph(1);
         graphProperties.setGraphDataList(mockDataList());
 
         mockMvc.perform(post("/generateGraph")
@@ -120,7 +121,7 @@ public class BuildGraphControllerTest {
     public void assertGraphPropertiesObjectValuesAreCorrectWhenUsingTheRestTemplate() throws JsonProcessingException {
 
         GraphProperties graphProperties = mockGraphProperties("RestTemplate Test1", "MEDIUM", true);
-        graphProperties.setTypeOfGraph('p');
+        graphProperties.setTypeOfGraph(1);
         graphProperties.setGraphDataList(mockDataList());
 
         HttpEntity request = setupRestTemplate(graphProperties);
@@ -138,7 +139,7 @@ public class BuildGraphControllerTest {
     public void assertGraphPropertiesObjectGraphURLIsValidAndSuffixEndsIn_PieChartWhenGraphIsOfTypePie() {
 
         GraphProperties graphProperties = mockGraphProperties("RestTemplate Test1", "MEDIUM", true);
-        graphProperties.setTypeOfGraph('p');
+        graphProperties.setTypeOfGraph(1);
         graphProperties.setGraphDataList(mockDataList());
 
         HttpEntity request = setupRestTemplate(graphProperties);
@@ -153,7 +154,7 @@ public class BuildGraphControllerTest {
     public void assertGraphPropertiesObjectGraphURLIsValidAndSuffixEndsIn_CategoryChartWhenGraphIsOfTypeCategory() {
 
         GraphProperties graphProperties = mockGraphProperties("RestTemplate Test1", "LARGE", true);
-        graphProperties.setTypeOfGraph('b');
+        graphProperties.setTypeOfGraph(3);
         graphProperties.setGraphDataList(mockDataList());
 
         HttpEntity request = setupRestTemplate(graphProperties);

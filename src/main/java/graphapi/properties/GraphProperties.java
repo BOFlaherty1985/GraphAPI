@@ -13,18 +13,18 @@ import java.util.List;
  */
 public class GraphProperties {
 
-    private char typeOfGraph;
+    private int typeOfGraph;
     private String title;
     private String requiredSize;
     private boolean legendRequired;
     private List<GraphData> graphDataList;
     private String graphURL;
 
-    public void setTypeOfGraph(char typeOfGraph) {
+    public void setTypeOfGraph(int typeOfGraph) {
         this.typeOfGraph = typeOfGraph;
     }
 
-    public char getTypeOfGraph() {
+    public int getTypeOfGraph() {
         return typeOfGraph;
     }
 

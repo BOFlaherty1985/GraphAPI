@@ -140,7 +140,7 @@ public class BuildGraphTest {
     @Test
     public void verifyPieDatasetIsCalledWhenTypeOfGraphRequestedIsEqualToP() throws Exception {
 
-        when(graphProperties.getTypeOfGraph()).thenReturn('p');
+        when(graphProperties.getTypeOfGraph()).thenReturn(1);
         when(graphFactory.buildGraph(graphProperties)).thenReturn(budgetPieGraph);
 
         buildGraph.generateGraph(graphProperties);
@@ -151,7 +151,7 @@ public class BuildGraphTest {
     @Test
     public void verifyCategoryDatasetIsCalledWhenTypeOfGraphRequestedIsEqualToL() throws Exception {
 
-        when(graphProperties.getTypeOfGraph()).thenReturn('l');
+        when(graphProperties.getTypeOfGraph()).thenReturn(2);
         when(graphFactory.buildGraph(graphProperties)).thenReturn(budgetCategoryGraph);
 
         buildGraph.generateGraph(graphProperties);
@@ -162,7 +162,7 @@ public class BuildGraphTest {
     @Test
     public void verifyCategoryDatasetIsCalledWhenTypeOfGraphRequestedIsEqualToB() throws Exception {
 
-        when(graphProperties.getTypeOfGraph()).thenReturn('b');
+        when(graphProperties.getTypeOfGraph()).thenReturn(3);
         when(graphFactory.buildGraph(graphProperties)).thenReturn(budgetCategoryGraph);
 
         buildGraph.generateGraph(graphProperties);

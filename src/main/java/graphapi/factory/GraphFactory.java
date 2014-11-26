@@ -18,9 +18,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class GraphFactory {
 
-    public static final char PIE_GRAPH = 'p';
-    public static final char LINE_GRAPH = 'l';
-    public static final char BAR_GRAPH = 'b';
+    public static final int PIE_GRAPH = 1;
+    public static final int LINE_GRAPH = 2;
+    public static final int BAR_GRAPH = 3;
 
     public BudgetGraph buildGraph(GraphProperties graphProperties) throws Exception {
 
@@ -38,8 +38,6 @@ public class GraphFactory {
     private BudgetGraph determineTypeOfGraph(GraphProperties graphProperties) {
 
         BudgetGraph graph = null;
-
-        graphProperties.setTypeOfGraph('p');
 
         switch (graphProperties.getTypeOfGraph()) {
             case PIE_GRAPH:

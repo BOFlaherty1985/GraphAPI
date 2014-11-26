@@ -78,7 +78,7 @@ public class GraphFactoryTest {
     @Test
     public void assertGraphPropertiesContainsUserInputTypeOfGraphRequested() throws Exception {
 
-        when(graphProperties.getTypeOfGraph()).thenReturn('x');
+        when(graphProperties.getTypeOfGraph()).thenReturn(8);
 
         factory.buildGraph(graphProperties);
         assertTrue("GraphProperties contains a char value.", graphProperties.getTypeOfGraph() != ' ');
@@ -88,7 +88,7 @@ public class GraphFactoryTest {
     @Test
     public void assertPieGraphImplementationIsReturnedWheNTypeOfGraphIsEqualToP() throws Exception {
 
-        when(graphProperties.getTypeOfGraph()).thenReturn('p');
+        when(graphProperties.getTypeOfGraph()).thenReturn(1);
 
         BudgetGraph result = factory.buildGraph(graphProperties);
         assertTrue("Result is of type BudgetPieGraph.", result instanceof BudgetPieGraph);
@@ -98,7 +98,7 @@ public class GraphFactoryTest {
     @Test
     public void assertCategoryGraphImplementationIsReturnedWheNTypeOfGraphIsEqualToL() throws Exception {
 
-        when(graphProperties.getTypeOfGraph()).thenReturn('l');
+        when(graphProperties.getTypeOfGraph()).thenReturn(2);
 
         BudgetGraph result = factory.buildGraph(graphProperties);
         assertTrue("Result is of type BudgetCategoryGraph.", result instanceof BudgetCategoryGraph);
@@ -108,7 +108,7 @@ public class GraphFactoryTest {
     @Test
     public void assertCategoryGraphImplementationIsReturnedWheNTypeOfGraphIsEqualToB() throws Exception {
 
-        when(graphProperties.getTypeOfGraph()).thenReturn('b');
+        when(graphProperties.getTypeOfGraph()).thenReturn(3);
 
         BudgetGraph result = factory.buildGraph(graphProperties);
         assertTrue("Result is of type BudgetCategoryGraph.", result instanceof BudgetCategoryGraph);
@@ -126,7 +126,7 @@ public class GraphFactoryTest {
     @Test
     public void assertNullIsReturnedWhenTypeOfGraphIsNotValidTestTwo() throws Exception {
 
-        when(graphProperties.getTypeOfGraph()).thenReturn('x');
+        when(graphProperties.getTypeOfGraph()).thenReturn(10);
 
         BudgetGraph result = factory.buildGraph(graphProperties);
         assertTrue("Result is equal to null", result == null);
@@ -136,21 +136,12 @@ public class GraphFactoryTest {
     @Test
     public void assertNullIsReturnedWhenTypeOfGraphIsNotValidTestThree() throws Exception {
 
-        when(graphProperties.getTypeOfGraph()).thenReturn('*');
+        when(graphProperties.getTypeOfGraph()).thenReturn(100);
 
         BudgetGraph result = factory.buildGraph(graphProperties);
         assertTrue("Result is equal to null", result == null);
 
     }
 
-    @Test
-    public void assertNullIsReturnedWhenTypeOfGraphIsAnUppercaseLetter() throws Exception {
-
-        when(graphProperties.getTypeOfGraph()).thenReturn('P');
-
-        BudgetGraph result = factory.buildGraph(graphProperties);
-        assertTrue("Result is equal to null", result == null);
-
-    }
 
 }
