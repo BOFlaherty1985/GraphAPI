@@ -1,9 +1,9 @@
-package main.java.graphapi.implementation;
+package graphapi.implementation;
 
-import main.java.graphapi.exceptions.BudgetGraphIsInvalidException;
-import main.java.graphapi.exceptions.BudgetGraphNullException;
-import main.java.graphapi.properties.GraphProperties;
-import main.java.graphapi.properties.GraphSize;
+import graphapi.exceptions.BudgetGraphIsInvalidException;
+import graphapi.exceptions.BudgetGraphNullException;
+import graphapi.properties.GraphProperties;
+import graphapi.properties.GraphSize;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;

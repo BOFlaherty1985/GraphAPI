@@ -1,4 +1,4 @@
-package main.java.graphapi.properties;
+package graphapi.properties;
 
 /**
  * Description Here

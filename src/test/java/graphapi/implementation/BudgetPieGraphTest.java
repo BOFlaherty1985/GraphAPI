@@ -1,9 +1,8 @@
-package test.graphapi.implementation;
+package graphapi.implementation;
 
-import main.java.graphapi.exceptions.BudgetGraphIsInvalidException;
-import main.java.graphapi.exceptions.BudgetGraphNullException;
-import main.java.graphapi.implementation.BudgetPieGraph;
-import main.java.graphapi.properties.GraphProperties;
+import graphapi.exceptions.BudgetGraphIsInvalidException;
+import graphapi.exceptions.BudgetGraphNullException;
+import graphapi.properties.GraphProperties;
 import org.jfree.chart.ChartFactory;
 import org.jfree.data.general.PieDataset;
 import org.junit.After;

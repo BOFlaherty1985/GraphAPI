@@ -1,12 +1,11 @@
-package test.graphapi.controller;
+package graphapi.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import main.java.graphapi.controller.BuildGraphController;
-import main.java.graphapi.factory.BuildGraph;
-import main.java.graphapi.factory.GraphFactory;
-import main.java.graphapi.model.GraphData;
-import main.java.graphapi.properties.GraphProperties;
+import graphapi.factory.BuildGraph;
+import graphapi.factory.GraphFactory;
+import graphapi.model.GraphData;
+import graphapi.properties.GraphProperties;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,9 +27,9 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import static junit.framework.TestCase.assertNotNull;
-import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 import static org.springframework.test.util.AssertionErrors.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -44,13 +43,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @project GraphAPI
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:main/webapp/WEB-INF/GraphBuilder-servlet.xml")
+@ContextConfiguration("classpath:/graphapi/context/test-context-servlet.xml")
 @WebAppConfiguration
 public class BuildGraphControllerTest {
 
     private MockMvc mockMvc;
 
-    private static final String REST_URL = "http://localhost:8080/GraphBuilder/generateGraph";
+    private static final String REST_URL = "http://localhost:8080/GraphAPIGradle/generateGraph";
 
     @Autowired
     private BuildGraphController buildGraphController;
@@ -135,6 +134,8 @@ public class BuildGraphControllerTest {
         assertNotNull("Response GraphURL should not be null.", response.getBody().getGraphURL());
     }
 
+
+
     @Test
     public void assertGraphPropertiesObjectGraphURLIsValidAndSuffixEndsIn_PieChartWhenGraphIsOfTypePie() {
 
@@ -174,14 +175,6 @@ public class BuildGraphControllerTest {
         return new HttpEntity( graphProperties, headers );
     }
 
-//    @Test
-//    public void testFootballApi() {
-//
-//        ResponseEntity<Object[]> responseEntity = restTemplate.getForEntity("http://football-api.com/api/?Action=standings&APIKey=eedee853-c3f8-a783-f10599bf8217&comp_id=[2]", Object[].class);
-//        System.out.println(responseEntity.toString());
-//
-//    }
-
     private GraphProperties mockGraphProperties(String title, String sizeOfGraph, boolean isLegendRequired) {
 
         GraphProperties graphProperties = new GraphProperties();
@@ -212,3 +205,5 @@ public class BuildGraphControllerTest {
     }
 
 }
+
+

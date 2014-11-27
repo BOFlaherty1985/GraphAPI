@@ -10,7 +10,7 @@
 
     <mvc:annotation-driven/>
 
-    <context:component-scan base-package="main.java.graphapi.*"/>
+    <context:component-scan base-package="graphapi.*"/>
 
     <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
         <property name="messageConverters">

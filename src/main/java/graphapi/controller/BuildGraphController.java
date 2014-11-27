@@ -1,7 +1,7 @@
-package main.java.graphapi.controller;
+package graphapi.controller;
 
-import main.java.graphapi.factory.BuildGraph;
-import main.java.graphapi.properties.GraphProperties;
+import graphapi.factory.BuildGraph;
+import graphapi.properties.GraphProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -34,6 +34,5 @@ public class BuildGraphController {
 
         return new ResponseEntity<GraphProperties>(buildGraph.generateGraph(graphProperties), HttpStatus.CREATED);
     }
-
 
 }

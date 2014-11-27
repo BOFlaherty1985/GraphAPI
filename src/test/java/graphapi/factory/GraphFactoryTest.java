@@ -1,11 +1,10 @@
-package test.graphapi.factory;
+package graphapi.factory;
 
-import main.java.graphapi.exceptions.GraphPropertiesNullException;
-import main.java.graphapi.factory.GraphFactory;
-import main.java.graphapi.implementation.BudgetCategoryGraph;
-import main.java.graphapi.implementation.BudgetGraph;
-import main.java.graphapi.implementation.BudgetPieGraph;
-import main.java.graphapi.properties.GraphProperties;
+import graphapi.exceptions.GraphPropertiesNullException;
+import graphapi.implementation.BudgetCategoryGraph;
+import graphapi.implementation.BudgetGraph;
+import graphapi.implementation.BudgetPieGraph;
+import graphapi.properties.GraphProperties;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

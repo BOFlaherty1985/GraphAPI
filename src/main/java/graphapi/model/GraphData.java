@@ -1,4 +1,4 @@
-package main.java.graphapi.model;
+package graphapi.model;
 
 import java.math.BigDecimal;
 

@@ -1,8 +1,8 @@
-package main.java.graphapi;
+package graphapi;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import main.java.graphapi.model.GraphData;
-import main.java.graphapi.properties.GraphProperties;
+import graphapi.model.GraphData;
+import graphapi.properties.GraphProperties;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;

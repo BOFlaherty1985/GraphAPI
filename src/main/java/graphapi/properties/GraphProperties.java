@@ -1,6 +1,7 @@
-package main.java.graphapi.properties;
+package graphapi.properties;
 
-import main.java.graphapi.model.GraphData;
+
+import graphapi.model.GraphData;
 
 import java.util.List;
 

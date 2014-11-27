@@ -1,4 +1,4 @@
-package test.graphapi.dataset;
+package graphapi.dataset;
 
 /**
  * Category Dataset Implementation Test

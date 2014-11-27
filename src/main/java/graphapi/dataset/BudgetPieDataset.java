@@ -1,6 +1,6 @@
-package main.java.graphapi.dataset;
+package graphapi.dataset;
 
-import main.java.graphapi.model.GraphData;
+import graphapi.model.GraphData;
 import org.jfree.data.general.AbstractDataset;
 import org.jfree.data.general.DefaultPieDataset;
 import org.springframework.stereotype.Component;

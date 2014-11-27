@@ -1,7 +1,6 @@
-package test.graphapi.dataset;
+package graphapi.dataset;
 
-import main.java.graphapi.dataset.BudgetPieDataset;
-import main.java.graphapi.model.GraphData;
+import graphapi.model.GraphData;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
 import org.junit.Test;

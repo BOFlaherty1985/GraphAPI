@@ -1,6 +1,6 @@
-package main.java.graphapi.implementation;
+package graphapi.implementation;
 
-import main.java.graphapi.properties.GraphProperties;
+import graphapi.properties.GraphProperties;
 import org.jfree.data.general.AbstractDataset;
 
 /**

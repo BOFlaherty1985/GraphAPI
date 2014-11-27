@@ -1,12 +1,12 @@
-package main.java.graphapi.factory;
+package graphapi.factory;
 
-import main.java.graphapi.dataset.BudgetCategoryDataset;
-import main.java.graphapi.dataset.BudgetPieDataset;
-import main.java.graphapi.exceptions.BudgetGraphNullException;
-import main.java.graphapi.exceptions.GraphDatasetNullException;
-import main.java.graphapi.exceptions.GraphPropertiesNullException;
-import main.java.graphapi.implementation.BudgetGraph;
-import main.java.graphapi.properties.GraphProperties;
+import graphapi.dataset.BudgetCategoryDataset;
+import graphapi.dataset.BudgetPieDataset;
+import graphapi.exceptions.BudgetGraphNullException;
+import graphapi.exceptions.GraphDatasetNullException;
+import graphapi.exceptions.GraphPropertiesNullException;
+import graphapi.implementation.BudgetGraph;
+import graphapi.properties.GraphProperties;
 import org.jfree.data.general.AbstractDataset;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

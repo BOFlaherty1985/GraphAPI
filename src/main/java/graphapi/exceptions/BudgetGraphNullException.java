@@ -1,4 +1,4 @@
-package main.java.graphapi.exceptions;
+package graphapi.exceptions;
 
 /**
  * Exception to be thrown when BudgetGraph is null.

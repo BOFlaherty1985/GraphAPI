@@ -1,4 +1,4 @@
-package main.java.graphapi.exceptions;
+package graphapi.exceptions;
 
 /**
  * Description Here
